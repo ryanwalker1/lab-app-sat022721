@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+
+//import React from 'react';
 import './App.css';
+import Welcome from './Welcome';
+import Clock from './Clock';
+import Toggle from './Toggle';
+import Numbers from './Numbers';
+//import LoginControl from './Login';
 
 function App() {
+
+  
+  let guests = ["Jamie", "Sherine", "Diane"];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>hello world!</h1>
+      {/* render the welcome component with props */}
+       <Welcome name = "Ryan Walker"/>
+       <Welcome name = "New Name"/>
+       
+       <h2> render all my guests</h2>      
+
+       {
+
+        guests.map((guest) =>  <Welcome name = {guest}/> )
+       }
+       <Clock/>
+       <Clock/>
+       <Clock/>    
+       <Toggle/>  
+       
+       
     </div>
+    
   );
 }
 
